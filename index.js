@@ -9,8 +9,8 @@ app.use(cors());
 app.get("/", (request, response) => {
     response.send("NODE.JS FILE SYSTEM TASK  ");
     response.json({
-        message:`/create->To CREATE .txt file`,
-        message:`/->To READ .txt file`
+        createMessage: `/create->To CREATE .txt file`,
+        readMessage: `/->To READ .txt file`
         })
   });
     
