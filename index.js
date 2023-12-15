@@ -5,7 +5,7 @@ const app=express();
 
 app.use(cors());
 
-//0. Home Page FILE SYSTEM
+
 app.get("/", (request, response) => {
     response.send("NODE.JS FILE SYSTEM TASK  ");
     response.json({
@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
   });
     
 
-//1. To Create .txt file
+
 app.get("/create",function (req,res){
     var timestamp=new Date();
     var filename=timestamp.getDate()+"-"+timestamp.getHours()+timestamp.getMinutes()+timestamp.getSeconds();    
@@ -28,7 +28,7 @@ app.get("/create",function (req,res){
             })
     
 })
-//2. To READ all txt_files
+
 
 app.get("/read",function (req,res){
     var txt_files=[];
@@ -50,6 +50,6 @@ app.get("/read",function (req,res){
     
 })
 
-app.listen(process.env.PORT||3010,()=>{
-    console.log("App listening at port-3010 ");
+app.listen(process.env.PORT||3005,()=>{
+    console.log("App listening at port-3005 ");
 })
